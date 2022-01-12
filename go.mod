@@ -1,6 +1,6 @@
 module github.com/TykTechnologies/tyk-sync
 
-go 1.13
+go 1.17
 
 require (
 	github.com/TykTechnologies/tyk v1.9.2-0.20211118114729-bc0667a2871c
