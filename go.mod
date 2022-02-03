@@ -1,10 +1,10 @@
 module github.com/TykTechnologies/tyk-sync
 
-go 1.17
+go 1.13
 
 require (
 	github.com/TykTechnologies/tyk v1.9.2-0.20211118114729-bc0667a2871c
-	github.com/TykTechnologies/graphql-go-tools
+	github.com/jensneuse/graphql-go-tools v1.20.2
 	github.com/kataras/go-errors v0.0.3
 	github.com/levigross/grequests v0.0.0-20190908174114-253788527a1a
 	github.com/ongoingio/urljoin v0.0.0-20140909071054-8d88f7c81c3c
@@ -18,3 +18,4 @@ require (
 	gopkg.in/src-d/go-git.v4 v4.13.1
 )
 
+replace github.com/jensneuse/graphql-go-tools => github.com/TykTechnologies/graphql-go-tools v1.6.2-0.20210909091849-83a2f375a915
