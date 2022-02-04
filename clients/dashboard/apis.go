@@ -62,19 +62,6 @@ func (c *Client) CreateAPI(def *objects.DBApiDefinition) (string, error) {
 
 	retainedIDs := false
 
-	for _, api := range apis.Apis {
-		if api.APIID == def.APIID {
-			fmt.Println("Warning: API ID Exists")
-			return "", UseUpdateError
-		}
-
-		if api.Slug == def.Slug {
-			fmt.Println("Warning: Slug Exists")
-			return "", UseUpdateError
-		}
-
-	}
-
 	if def.APIID != "" {
 		// Retain the API ID
 		retainedIDs = true
