@@ -111,16 +111,6 @@ func (c *Client) CreateAPI(def *objects.DBApiDefinition) (string, error) {
 		return "", err
 	}
 
-	for _, api := range apis {
-		if api.APIID == def.APIID {
-			return "", UseUpdateError
-		}
-
-		if api.Proxy.ListenPath == def.Proxy.ListenPath {
-			return "", UseUpdateError
-		}
-	}
-
 	// Create
 	createResp, err := grequests.Post(fullPath, &grequests.RequestOptions{
 		JSON: def.APIDefinition,
